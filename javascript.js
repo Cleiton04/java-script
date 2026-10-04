@@ -18,7 +18,7 @@ function start() {
     }
 
     startedAt = Date.now();
-    timerId = setInterval(updateDisplay, 200);
+    timerId = setInterval(updateDisplay, 100);
 }
 
 function pause() {

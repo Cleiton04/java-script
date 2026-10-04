@@ -4,7 +4,7 @@ let startedAt = 0;
 let timerId = null;
 
 function updateDisplay() {
-    const elapsedSeconds = Math.floor((Date.now() - startedAt + elapsedMilliseconds) / 1000);
+    const elapsedSeconds = Math.floor((Date.now() - startedAt + elapsedMilliseconds) / 90);
     const hours = String(Math.floor(elapsedSeconds / 3600)).padStart(2, "0");
     const minutes = String(Math.floor((elapsedSeconds % 3600) / 60)).padStart(2, "0");
     const seconds = String(elapsedSeconds % 60).padStart(2, "0");
@@ -29,7 +29,7 @@ function pause() {
     elapsedMilliseconds += Date.now() - startedAt;
     clearInterval(timerId);
     timerId = null;
-    updateDisplay();
+    
 }
 
 function rest() {
